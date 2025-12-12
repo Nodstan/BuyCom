@@ -1,16 +1,129 @@
-# React + Vite
+# BuyCom
+A modern eCommerce web application built with React, featuring product browsing, dynamic product pages, categories, cart system, responsive UI, and EmailJS-powered newsletter subscription.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛒 BuyCom
 
-Currently, two official plugins are available:
+A modern and fully responsive eCommerce web application built with React, designed for browsing products, viewing detailed product pages, managing cart interactions, and subscribing to a newsletter powered by EmailJS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BuyCom focuses on clean UI, smooth user experience, and scalable front-end architecture.
 
-## React Compiler
+🚀 Features
+✨ Modern Shopping Experience
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Fully responsive across devices
 
-## Expanding the ESLint configuration
+Clean and elegant UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Featured sections: New Arrivals, Top Selling, Customer Reviews
+
+🧭 Navigation System
+
+Dynamic active state highlighting
+
+Mobile-friendly hamburger menu
+
+Smooth page transitions with auto scroll-to-top
+
+🛍 Product Features
+
+Product grid layout
+
+Detailed product pages with images, rating, and pricing
+
+Dynamic :id routing with React Router
+
+Clickable related items
+
+📩 Newsletter Subscription
+
+EmailJS integration
+
+Users can subscribe with their email
+
+Custom email template: sends notifications to admin
+
+🧱 Components
+
+Header
+
+Footer
+
+Home
+
+Categories
+
+Account
+
+Cart
+
+Contact
+
+ProductDetail
+
+ScrollToTop
+
+🛠 Tech Stack
+Technology	Purpose
+React	Frontend framework
+React Router DOM	Routing and navigation
+EmailJS	Newsletter email delivery
+CSS / Flexbox / Grid	UI styling
+React Icons	Iconography
+📁 Project Structure
+/src
+  /components
+    Header.jsx
+    Footer.jsx
+    Home.jsx
+    Categories.jsx
+    ProductDetail.jsx
+    Cart.jsx
+    Account.jsx
+    Contact.jsx
+    ScrollToTop.jsx
+  /assets
+  /data
+  App.jsx
+  main.jsx
+
+🔧 Setup Instructions
+1️⃣ Clone the repository
+git clone https://github.com/Nodstan/BuyCom.git
+cd BuyCom
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run the project
+npm run dev
+
+🔐 EmailJS Setup
+
+To enable newsletter email delivery:
+
+Create an EmailJS account
+
+Add a Service ID, Template ID, and Public Key
+
+Insert them inside Footer.jsx in the emailjs.send() function
+
+🎯 Future Improvements
+
+Add full cart functionality
+
+Add backend for user accounts
+
+Add product filtering & search system
+
+Add payment gateway integration
+
+Improve SEO & metadata
+
+📜 License
+
+This project is licensed under the MIT License.
+
+👤 Author
+
+Stanley (Nodstan)
+Front-end developer & project creator
