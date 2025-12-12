@@ -1,0 +1,190 @@
+/* =========================================
+   PRODUCT DETAIL PAGE
+========================================= */
+
+.product-detail {
+    width: 90%;
+    max-width: 1300px;
+    margin: 130px auto;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* =========================================
+     TOP SECTION (IMAGE + INFO)
+  ========================================= */
+  .pd-top {
+    display: flex;
+    gap: 50px;
+  }
+  
+  /* LEFT — IMAGE GALLERY */
+  .pd-gallery {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .pd-thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .pd-thumbs img {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .pd-main-image img {
+    width: 350px;
+    border-radius: 8px;
+  }
+  
+  /* RIGHT — PRODUCT INFO */
+  .pd-info {
+    flex: 1;
+  }
+  
+  .pd-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .pd-ratings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+  }
+  
+  .pd-reviews {
+    margin-left: 10px;
+    color: #888;
+  }
+  
+  /* PRICE */
+  .pd-price {
+    margin: 15px 0;
+    font-size: 1.4rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .pd-price .old {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .pd-price .discount {
+    background: #ffebcd;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+  }
+  
+  /* DESCRIPTION */
+  .pd-desc {
+    max-width: 420px;
+    color: #555;
+  }
+  
+  /* SIZES */
+  .pd-sizes {
+    margin-top: 20px;
+  }
+  
+  .size-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .size-options button {
+    border: 1px solid #ddd;
+    padding: 7px 14px;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* QUANTITY */
+  .pd-qty {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    align-items: center;
+  }
+  
+  .pd-qty button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+  }
+  
+  /* ACTION BUTTONS */
+  .pd-actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .add-cart {
+    padding: 10px 25px;
+    border: 1px solid #000;
+    background: white;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .order-now {
+    padding: 10px 25px;
+    background: #ffc633;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* =========================================
+     YOU MIGHT ALSO LIKE
+  ========================================= */
+  .pd-recommend {
+    margin-top: 60px;
+  }
+  
+  .pd-recommend-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  /* Link wrapper for recommended cards */
+  .rec-card-link {
+    text-decoration: none;   /* remove underline */
+    color: inherit;          /* keep text black */
+    display: block;
+  }
+  
+  /* Card Container */
+  .rec-card {
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+  
+  .rec-card:hover {
+    transform: translateY(-4px);
+    background: #f9f9f9;
+  }
+  
+  .rec-card img {
+    width: 140px;
+    border-radius: 8px;
+  }
+  

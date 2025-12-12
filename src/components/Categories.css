@@ -1,0 +1,118 @@
+.categories-page {
+    display: flex;
+    width: 90%;
+    max-width: 1300px;
+    margin: 130px auto;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* SIDEBAR */
+  .cat-sidebar {
+    width: 200px;
+  }
+  
+  .cat-sidebar h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  .cat-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .cat-sidebar li {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  /* CONTENT */
+  .cat-content {
+    flex: 1;
+    padding-left: 40px;
+  }
+  
+  .cat-section {
+    margin-bottom: 60px;
+  }
+  
+  .cat-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .cat-card {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .cat-img-box {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 14px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cat-img-box img {
+    width: 70%;
+  }
+  
+  .cat-card h4 {
+    margin: 10px 0 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .rating {
+    font-size: 0.75rem;
+    color: #ffb800;
+  }
+  
+  .rating span {
+    color: #444;
+  }
+  
+  .price {
+    font-weight: 700;
+    display: flex;
+    gap: 7px;
+    font-size: 0.9rem;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .tag {
+    background: #ffe1e1;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    color: #ff4444;
+    border-radius: 4px;
+  }
+  
+  /* View all */
+  .view-all {
+    display: block;
+    margin: 15px auto 0;
+    padding: 8px 25px;
+    background: #ffc633;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
