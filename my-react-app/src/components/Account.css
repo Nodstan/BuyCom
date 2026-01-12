@@ -1,0 +1,231 @@
+/* ===============================
+   ACCOUNT PAGE BASE
+=============================== */
+.account-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 130px auto 80px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* ===============================
+     TOP TABS
+  =============================== */
+  .account-tabs {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 35px;
+    font-weight: 500;
+  }
+  
+  .account-tabs span {
+    cursor: pointer;
+    color: #444;
+    padding-bottom: 4px;
+  }
+  
+  .account-tabs span.active {
+    border-bottom: 2px solid #000;
+    font-weight: 600;
+  }
+  
+  /* ===============================
+     PROFILE SECTION (2 Columns)
+  =============================== */
+  .profile-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 40px;
+  }
+  
+  .column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  /* Input Blocks */
+  .input-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .input-block label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .input-block input,
+  .input-block select {
+    border: 1px solid #dcdcdc;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    width: 100%;
+    background: white;
+  }
+  
+  /* ===============================
+     PREFERENCES SECTION
+  =============================== */
+  .settings-box {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .setting-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .setting-block label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .setting-block input {
+    border: 1px solid #dcdcdc;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    width: 100%;
+    background: white;
+  }
+  
+  /* ===============================
+     TOGGLE SWITCHES
+  =============================== */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  
+  .toggle {
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background: #dcdcdc;
+    position: relative;
+    cursor: pointer;
+    transition: 0.25s ease;
+  }
+  
+  .toggle.on {
+    background: #ffc633;
+  }
+  
+  .circle {
+    width: 18px;
+    height: 18px;
+    background: white !important;
+    border-radius: 50%;
+    position: absolute;
+    top: 3.5px;
+    left: 5px;
+    transition: 0.25s ease;
+  }
+  
+  .toggle.on .circle {
+    left: 21px;
+    top: 3.5px;
+  }
+  
+  /* ===============================
+     SAVE BUTTON
+  =============================== */
+  .save-btn-wrapper {
+    text-align: right;
+    margin-top: 25px;
+  }
+  
+  .save-btn {
+    background: #ffc633;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* ===============================
+     PLACEHOLDER SECTIONS
+  =============================== */
+  .placeholder-box {
+    padding: 40px 0;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* ===============================
+     RESPONSIVE
+  =============================== */
+  @media (max-width: 900px) {
+    .profile-section {
+      flex-direction: column;
+    }
+  
+    .column {
+      width: 100%;
+    }
+  
+    .settings-box {
+      width: 100%;
+    }
+  
+    .save-btn-wrapper {
+      text-align: center;
+    }
+  }
+  
+
+  /* ===============================
+   SECURITY SECTION
+=============================== */
+.security-section {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 60%;
+  }
+  
+  .security-block h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .security-block .input-block {
+    margin-top: 12px;
+  }
+  
+  .security-block input {
+    border: 1px solid #dcdcdc;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+  }
+  
+  /* Match screenshot spacing */
+  .security-block span {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  /* Make Save button centered like screenshot */
+  .security-section .save-btn-wrapper {
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,159 @@
+/* REMOVE HORIZONTAL OVERFLOW */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===========================
+   HEADER MAIN
+=========================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;     /* reduced from 30px to align edge-to-edge */
+  background-color: #FFC633;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* ===========================
+   DESKTOP NAV
+=========================== */
+.desktop-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+.nav-link.active {
+  background: #fff !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  border-radius: 8px;
+}
+
+/* ===========================
+   DESKTOP SEARCH
+=========================== */
+.desktop-search {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 10px 18px;
+  border-radius: 40px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  margin-right: 8px;
+  color: #777;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   MOBILE ICONS
+=========================== */
+.mobile-icons {
+  display: none;
+}
+
+.icon {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .desktop-nav,
+  .desktop-search {
+    display: none;
+  }
+}
+
+/* ===========================
+   MOBILE SEARCH
+=========================== */
+.mobile-search {
+  padding: 8px 12px;
+  width: 130px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #fff;
+}
+
+/* ===========================
+   MOBILE NAV DRAWER
+=========================== */
+.mobile-nav-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #FFC633;
+  flex-direction: column;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 0.25s ease;
+}
+
+.mobile-nav-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-link {
+  padding: 16px 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.mobile-link.active {
+  background: rgba(255,255,255,0.5);
+}

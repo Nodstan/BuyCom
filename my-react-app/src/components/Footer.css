@@ -1,0 +1,207 @@
+/* =====================================================
+   FULL FOOTER — EXACTLY LIKE THE PROVIDED IMAGE
+===================================================== */
+
+.footer {
+  background: #f3f3f3;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ================================
+   NEWSLETTER — FULL WIDTH
+================================ */
+.newsletter-wrapper {
+  background: #ffffff;
+  width: 100%;
+  padding: 50px 40px;
+  border-radius: 16px;
+  border: 2px solid #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.newsletter-wrapper h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.newsletter-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 12px 18px;
+  width: 320px;
+  gap: 10px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.mail-icon {
+  opacity: 0.6;
+  font-size: 1.2rem;
+}
+
+.newsletter-input button {
+  background: #ffc633;
+  width: 100%;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================================
+   FOOTER INNER (PADDING AREA)
+================================ */
+.footer-inner {
+  padding: 0 80px 50px;
+  box-sizing: border-box;
+}
+
+/* ================================
+   GRID
+================================ */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-col p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.brand-desc {
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ================================
+   SOCIAL ICONS
+================================ */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.soc {
+  width: 45px;
+  height: 45px;
+  background: #ffc633;
+  border-radius: 10px;
+}
+
+/* ================================
+   BOTTOM FOOTER
+================================ */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.payments {
+  display: flex;
+  gap: 10px;
+}
+
+.pay {
+  width: 55px;
+  height: 35px;
+  background: #e8e8e8;
+  border-radius: 6px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1000px) {
+  .newsletter-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .newsletter-input {
+    align-items: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-inner {
+    padding: 0 20px 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-wrapper h2 {
+    font-size: 1.8rem;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+
+  .newsletter-input button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
