@@ -7,8 +7,6 @@ import path from "path";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
-import accountRoutes from "./routes/accountRoutes.js";
-import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -35,10 +33,7 @@ app.get("/", (req, res) => {
 app.use("/api/categories", categoryRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/dashboard", dashboardRoutes);
-app.use("/api/account", accountRoutes);
-app.use("/api/auth", authRoutes);
 
-// 🟢 IMPORTANT: EXPORT APP FOR VERCEL
 export default app;
 
 // 🟢 LOCAL DEVELOPMENT ONLY

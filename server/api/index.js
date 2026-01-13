@@ -5,8 +5,6 @@ import connectDB from "../config/db.js";
 import categoryRoutes from "../routes/categoryRoutes.js";
 import productRoutes from "../routes/productRoutes.js";
 import dashboardRoutes from "../routes/dashboardRoutes.js";
-import accountRoutes from "../routes/accountRoutes.js";
-import authRoutes from "../routes/authRoutes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -36,8 +34,6 @@ app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 app.use("/categories", categoryRoutes);
 app.use("/products", productRoutes);
 app.use("/dashboard", dashboardRoutes);
-app.use("/account", accountRoutes);
-app.use("/auth", authRoutes);
 
 // Base route
 app.get("/", (req, res) => {
