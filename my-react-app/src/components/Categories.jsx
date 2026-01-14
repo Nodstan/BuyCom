@@ -162,7 +162,7 @@ const Categories = () => {
                   key={item._id}
                 >
                   <img
-                    src={`http://localhost:5000${item.image}`}
+                    src={`https://buycom-api.vercel.app${item.image}`}
                     className="product-img"
                     alt={item.name}
                   />
@@ -183,7 +183,7 @@ const Categories = () => {
             {groupedProducts.cloth.map((item) => (
               <Link to={`/product/${item._id}`} className="cat-card" key={item._id}>
                 <img
-                  src={`http://localhost:5000${item.image}`}
+                  src={`https://buycom-api.vercel.app${item.image}`}
                   className="product-img"
                   alt={item.name}
                 />
@@ -201,7 +201,7 @@ const Categories = () => {
             {groupedProducts.shoes.map((item) => (
               <Link to={`/product/${item._id}`} className="cat-card" key={item._id}>
                 <img
-                  src={`http://localhost:5000${item.image}`}
+                  src={`https://buycom-api.vercel.app${item.image}`}
                   className="product-img"
                   alt={item.name}
                 />
@@ -219,7 +219,7 @@ const Categories = () => {
             {groupedProducts.cosmetics.map((item) => (
               <Link to={`/product/${item._id}`} className="cat-card" key={item._id}>
                 <img
-                  src={`http://localhost:5000${item.image}`}
+                  src={`https://buycom-api.vercel.app${item.image}`}
                   className="product-img"
                   alt={item.name}
                 />
@@ -237,7 +237,7 @@ const Categories = () => {
             {groupedProducts.bags.map((item) => (
               <Link to={`/product/${item._id}`} className="cat-card" key={item._id}>
                 <img
-                  src={`http://localhost:5000${item.image}`}
+                  src={`https://buycom-api.vercel.app${item.image}`}
                   className="product-img"
                   alt={item.name}
                 />

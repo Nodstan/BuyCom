@@ -133,7 +133,7 @@ const Home = () => {
             >
               <div className="img-box">
                 <img
-                  src={`http://localhost:5000${item.image}`}
+                  src={`https://buycom-api.vercel.app${item.image}`}
                   alt={item.name}
                 />
               </div>
@@ -158,7 +158,7 @@ const Home = () => {
             >
               <div className="img-box">
                 <img
-                  src={`http://localhost:5000${item.image}`}
+                  src={`https://buycom-api.vercel.app${item.image}`}
                   alt={item.name}
                 />
               </div>

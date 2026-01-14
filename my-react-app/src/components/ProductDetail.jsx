@@ -50,14 +50,14 @@ const ProductDetail = () => {
         <div className="pd-gallery">
           <div className="pd-thumbs">
             <img
-              src={`http://localhost:5000${product.image}`}
+              src={`https://buycom-api.vercel.app${product.image}`}
               alt={product.name}
             />
           </div>
 
           <div className="pd-main-image">
             <img
-              src={`http://localhost:5000${product.image}`}
+              src={`https://buycom-api.vercel.app${product.image}`}
               alt={product.name}
             />
           </div>
@@ -119,7 +119,7 @@ const ProductDetail = () => {
             >
               <div className="rec-card">
                 <img
-                  src={`http://localhost:5000${p.image}`}
+                  src={`https://buycom-api.vercel.app${p.image}`}
                   alt={p.name}
                 />
                 <h4>{p.name}</h4>
