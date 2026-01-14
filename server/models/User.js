@@ -87,13 +87,23 @@ const userSchema = new mongoose.Schema(
       },
     },
 
-    /* ======================
-       SECURITY
-    ====================== */
     twoFactorEnabled: {
       type: Boolean,
       default: false,
     },
+    paymentMethods: [
+      {
+        cardBrand: String,
+        cardLast4: String,
+        expMonth: String,
+        expYear: String,
+        cardholderName: String,
+        createdAt: {
+          type: Date,
+          default: Date.now,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );

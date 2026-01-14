@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
-  // Close mobile search/menu when window becomes desktop size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -19,13 +20,19 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleSearchSubmit = (e) => {
+    if (e) e.preventDefault();
+    const query = searchTerm.trim();
+    if (!query) return;
+    navigate(`/categories?q=${encodeURIComponent(query)}`);
+  };
+
   return (
     <header className="header">
 
       {/* LOGO */}
       <div className="logo">LOGO</div>
 
-      {/* DESKTOP NAVIGATION */}
       <nav className="nav desktop-nav">
         <NavLink to="/home" className="nav-link">
           Home
@@ -48,18 +55,20 @@ const Header = () => {
         </NavLink>
       </nav>
 
-      {/* DESKTOP SEARCH BAR */}
       <div className="desktop-search">
-        <div className="search-bar">
-          <FiSearch className="search-icon" />
-          <input type="text" placeholder="Search for products..." />
-        </div>
+        <form className="search-bar" onSubmit={handleSearchSubmit}>
+          <FiSearch className="search-icon" onClick={handleSearchSubmit} />
+          <input
+            type="text"
+            placeholder="Search for products..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </form>
       </div>
 
-      {/* MOBILE ICONS */}
       <div className="mobile-icons">
 
-        {/* MOBILE SEARCH TOGGLE */}
         {!searchOpen ? (
           <FiSearch className="icon" onClick={() => setSearchOpen(true)} />
         ) : (
@@ -68,11 +77,18 @@ const Header = () => {
             type="text"
             placeholder="Search..."
             autoFocus
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearchSubmit(e);
+                setSearchOpen(false);
+              }
+            }}
             onBlur={() => setSearchOpen(false)}
           />
         )}
 
-        {/* MOBILE MENU ICON */}
         {!menuOpen ? (
           <FiMenu className="icon" onClick={() => setMenuOpen(true)} />
         ) : (

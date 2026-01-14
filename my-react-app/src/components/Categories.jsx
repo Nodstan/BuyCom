@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Categories.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import API from "../services/api";
 
 /* ICONS */
@@ -29,6 +29,7 @@ const Categories = () => {
   const shoesRef = useRef(null);
   const cosmeticsRef = useRef(null);
   const bagsRef = useRef(null);
+  const location = useLocation();
 
   // ===============================
   // FETCH PRODUCTS & GROUP BY CATEGORY SLUG
@@ -61,9 +62,6 @@ const Categories = () => {
     fetchProducts();
   }, []);
 
-  // ===============================
-  // SCROLL WITH OFFSET
-  // ===============================
   const scrollWithOffset = (ref, section) => {
     const offset = 120;
     const topPos = ref.current.getBoundingClientRect().top + window.scrollY;
@@ -76,9 +74,6 @@ const Categories = () => {
     setActive(section);
   };
 
-  // ===============================
-  // SCROLL SPY
-  // ===============================
   useEffect(() => {
     const handleScroll = () => {
       const offset = 150;
@@ -96,6 +91,22 @@ const Categories = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const searchParams = new URLSearchParams(location.search);
+  const searchQuery = (searchParams.get("q") || "").trim().toLowerCase();
+
+  const allProducts = [
+    ...groupedProducts.cloth,
+    ...groupedProducts.shoes,
+    ...groupedProducts.cosmetics,
+    ...groupedProducts.bags,
+  ];
+
+  const filteredProducts = searchQuery
+    ? allProducts.filter((item) =>
+        item.name.toLowerCase().includes(searchQuery)
+      )
+    : [];
 
   return (
     <div className="categories-page">
@@ -133,8 +144,37 @@ const Categories = () => {
         </ul>
       </aside>
 
-      {/* MAIN CONTENT */}
       <div className="cat-content">
+
+        {searchQuery && (
+          <section className="cat-section">
+            <h2 className="cat-title">
+              Search Results for "{searchQuery}"
+            </h2>
+            <div className="cat-grid">
+              {filteredProducts.length === 0 && (
+                <p>No products found.</p>
+              )}
+              {filteredProducts.map((item) => (
+                <Link
+                  to={`/product/${item._id}`}
+                  className="cat-card"
+                  key={item._id}
+                >
+                  <img
+                    src={`http://localhost:5000${item.image}`}
+                    className="product-img"
+                    alt={item.name}
+                  />
+                  <h4 className="cat-name">{item.name}</h4>
+                  <p className="price">
+                    ₦{item.price.toLocaleString()}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* CLOTH */}
         <section className="cat-section" ref={clothRef}>

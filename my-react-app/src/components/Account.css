@@ -167,6 +167,49 @@
     font-size: 1.1rem;
     color: #555;
   }
+
+  .payment-section {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .saved-cards {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card-item {
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.9rem;
+  }
+
+  .card-item-title {
+    font-weight: 600;
+  }
+
+  .add-card-form {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .add-card-row {
+    display: flex;
+    gap: 14px;
+  }
+
+  .add-card-row .input-block {
+    flex: 1;
+  }
   
   /* ===============================
      RESPONSIVE

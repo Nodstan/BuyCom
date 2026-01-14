@@ -7,7 +7,6 @@ import Cshirt from "../assets/c-shirt.png";
 import sneakers from "../assets/sneakers.png";
 
 import sandals from "../assets/sandals.png";
-import tshirt from "../assets/t-shirt.png";
 import shorts from "../assets/short.png";
 import sportshoe from "../assets/s-shoes.png";
 

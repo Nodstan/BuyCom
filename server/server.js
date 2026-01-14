@@ -7,6 +7,8 @@ import path from "path";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+import accountRoutes from "./routes/accountRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -30,6 +32,8 @@ app.get("/", (req, res) => {
   res.send("BuyCom API running");
 });
 
+app.use("/api/auth", authRoutes);
+app.use("/api/account", accountRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/dashboard", dashboardRoutes);

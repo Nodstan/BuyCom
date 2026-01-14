@@ -12,7 +12,6 @@ import Account from "./components/Account";
 import Cart from "./components/Cart";
 import Contact from "./components/Contact";
 import ProductDetail from "./components/ProductDetail";
-import Login from "./components/Login";
 import AdminDashboard from "./admin/components/AdminDashboard";
 
 const App = () => {
@@ -40,8 +39,6 @@ const App = () => {
 
           {/* ADMIN */}
           <Route path="/admin" element={<AdminDashboard />} />
-
-          <Route path="/login" element={<Login />} />
         </Routes>
       </main>
 
